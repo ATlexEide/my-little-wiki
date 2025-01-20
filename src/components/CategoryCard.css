@@ -1,20 +1,32 @@
+section {
+  place-self: center;
+  background-color: gray;
+  padding: 2em;
+  width: 100%;
+  border: solid 4px black;
+  border-radius: 20px;
+  transition: 0.3s;
+}
 section,
 a {
-  max-width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-h2,
+section:hover {
+  scale: 0.95;
+  opacity: 0.9;
+}
 figure {
-  width: 30%;
+  width: fit-content;
 }
 h2 {
   text-align: center;
+  width: 100%;
 }
 img {
-  width: 100%;
+  width: 5rem;
 }
 .category-link {
   text-decoration: under;
