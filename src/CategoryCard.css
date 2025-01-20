@@ -1,0 +1,22 @@
+section,
+a {
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2,
+figure {
+  width: 30%;
+}
+h2 {
+  text-align: center;
+}
+img {
+  width: 100%;
+}
+.category-link {
+  text-decoration: under;
+  color: white;
+}
