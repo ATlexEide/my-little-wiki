@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://atlexeide.github.io/khfeu04-api/",
+  "homepage": "https://atlexeide.github.io/KHFEU04-API/",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "vite --open",
