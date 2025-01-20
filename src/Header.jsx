@@ -1,9 +1,11 @@
 import "./Header.css";
 import NavLinkExternal from "./NavLinkExternal";
+import SearchBar from "./SearchBar";
 function Header({ title }) {
   return (
     <header>
       <h1>{title}</h1>
+      <SearchBar />
       <nav>
         <ul>
           <NavLinkExternal
