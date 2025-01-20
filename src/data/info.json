@@ -14,6 +14,11 @@
       "title": "Episodes",
       "imagePath": "/episodes.png",
       "alt": "Series icons created by Freepik - Flaticon"
+    },
+    "comics": {
+      "title": "comics",
+      "imagePath": "/comics.png",
+      "alt": "Comic icons created by Md Tanvirul Haque - Flaticon"
     }
   }
 }
