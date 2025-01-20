@@ -1,20 +1,17 @@
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import fetchCharacterData from "./data/characterData";
+// import fetchCharacterData from "./js/characterData";
 import info from "./data/info.json";
 import CategoryCard from "./components/CategoryCard";
-fetchCharacterData("rainbow");
+import getImageUrl from "./assets/getImageUrl";
+// fetchCharacterData("rainbow");
+
 function App() {
   const categories = [];
   for (const val of Object.values(info.categories)) {
     categories.push(val);
     console.log(val);
-  }
-  // DONT TOUCH - IMAGES HARD
-  function getImageUrl(name) {
-    // note that this does not include files in subdirectories
-    return new URL(`./assets/${name}.png`, import.meta.url).href;
   }
   return (
     <>
@@ -24,7 +21,10 @@ function App() {
           <CategoryCard
             key={category.title}
             title={category.title}
-            imagePath={getImageUrl(category.title.toLocaleLowerCase())}
+            imagePath={getImageUrl(
+              category.title.toLocaleLowerCase(),
+              category.fileExtension
+            )}
             alt={category.alt}
           />
         ))}
