@@ -8,4 +8,5 @@ createRoot(document.getElementById("root")).render(
     <App />
   </StrictMode>
 );
-console.log(import.meta.env.KEY);
+console.log("fake api key: ", import.meta.env.KEY);
+console.log("other variable prefixed with VITE: ", import.meta.env.VITE_TEST);
