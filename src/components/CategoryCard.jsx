@@ -1,14 +1,14 @@
 import "./CategoryCard.css";
 function CategoryCard({ title, imagePath, alt }) {
   return (
-    <section>
-      <figure>
-        <a href="#" className="category-link">
+    <a href="#" className="category-link">
+      <section>
+        <figure>
           <img src={`${imagePath}`} alt={alt} />
-        </a>
-      </figure>
-      <h2>{title}</h2>
-    </section>
+        </figure>
+        <h2>{title}</h2>
+      </section>
+    </a>
   );
 }
 export default CategoryCard;
