@@ -10,7 +10,7 @@ function Header({ title }) {
             link="https://github.com/ATlexEide/KHFEU04-API"
             text="Repo"
           />
-          <NavLinkExternal link="" text="API" />
+          <NavLinkExternal link="https://ponyapi.net/" text="API" />
         </ul>
       </nav>
     </header>
