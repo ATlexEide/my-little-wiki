@@ -1,7 +1,12 @@
-function NavLinkExternal({ link, text }) {
+function NavLinkExternal({ link, text, fontSize = "2rem" }) {
   return (
     <li>
-      <a target="_blank" rel="noreferrer" href={link}>
+      <a
+        style={{ fontSize: fontSize }}
+        target="_blank"
+        rel="noreferrer"
+        href={link}
+      >
         {text}
       </a>
     </li>
