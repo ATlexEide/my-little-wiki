@@ -2,25 +2,25 @@
   "categories": {
     "characters": {
       "title": "Characters",
-      "imagePath": "/character",
+      "imagePath": "character",
       "fileExtension": "png",
       "alt": "Character icons created by Tanah Basah - Flaticon"
     },
     "songs": {
       "title": "Songs",
-      "imagePath": "/songs",
+      "imagePath": "songs",
       "fileExtension": "png",
       "alt": "Music note icons created by Freepik - Flaticon"
     },
     "episodes": {
       "title": "Episodes",
-      "imagePath": "/episodes",
+      "imagePath": "episodes",
       "fileExtension": "png",
       "alt": "Series icons created by Freepik - Flaticon"
     },
     "comics": {
       "title": "comics",
-      "imagePath": "/comics",
+      "imagePath": "comics",
       "fileExtension": "png",
       "alt": "Comic icons created by Md Tanvirul Haque - Flaticon"
     }

@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 // import fetchCharacterData from "./js/characterData";
 import info from "./data/info.json";
 import CategoryCard from "./components/CategoryCard";
-import getImageUrl from "./assets/getImageUrl";
+import getImageUrl from "../public/getImageUrl";
 // fetchCharacterData("rainbow");
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
               category.title.toLocaleLowerCase(),
               category.fileExtension
             )}
+            // imagePath={`${category.imagePath}.${category.fileExtension}`}
             alt={category.alt}
           />
         ))}

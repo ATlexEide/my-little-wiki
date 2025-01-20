@@ -1,4 +1,4 @@
-import getImageUrl from "../assets/getImageUrl";
+import getImageUrl from "../../public/getImageUrl";
 import "./Header.css";
 import SearchBar from "./SearchBar";
 function Header({ title }) {
