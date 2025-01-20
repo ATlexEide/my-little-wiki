@@ -1,0 +1,19 @@
+{
+  "categories": {
+    "characters": {
+      "title": "Characters",
+      "imagePath": "/character.png",
+      "alt": "Character icons created by Tanah Basah - Flaticon"
+    },
+    "songs": {
+      "title": "Songs",
+      "imagePath": "/songs.png",
+      "alt": "Music note icons created by Freepik - Flaticon"
+    },
+    "episodes": {
+      "title": "Episodes",
+      "imagePath": "/episodes.png",
+      "alt": "Series icons created by Freepik - Flaticon"
+    }
+  }
+}
