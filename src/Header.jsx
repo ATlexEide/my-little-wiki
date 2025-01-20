@@ -6,6 +6,7 @@ function Header() {
       <nav>
         <ul>
           <li>Repo</li>
+          <li>API</li>
         </ul>
       </nav>
     </header>
