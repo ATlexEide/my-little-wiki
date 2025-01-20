@@ -1,12 +1,16 @@
 import "./Header.css";
-function Header() {
+import NavLinkExternal from "./NavLinkExternal";
+function Header({ title }) {
   return (
     <header>
-      <h1>To Be Named</h1>
+      <h1>{title}</h1>
       <nav>
         <ul>
-          <li>Repo</li>
-          <li>API</li>
+          <NavLinkExternal
+            link="https://github.com/ATlexEide/KHFEU04-API"
+            text="Repo"
+          />
+          <NavLinkExternal link="" text="API" />
         </ul>
       </nav>
     </header>
