@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <main>
-        <Header />
+        <Header title="To Be Named" />
       </main>
     </>
   );
