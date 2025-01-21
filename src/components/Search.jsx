@@ -1,8 +1,18 @@
-import { useState } from "react";
 import "./Search.css";
+import { useState, useEffect } from "react";
 
-function Search({ characters }) {
+function Search() {
   const [input, setInput] = useState("");
+  const [characters, setCharacters] = useState([]);
+  useEffect(() => {
+    fetch(`https://ponyapi.net/v1/character/${input ? input : "all"}`)
+      .then((res) => res.json())
+      .then((res) => {
+        setCharacters(res.data);
+      })
+      .catch((e) => console.log(e));
+  });
+
   return (
     <>
       <input
@@ -11,8 +21,8 @@ function Search({ characters }) {
         onChange={(e) => setInput(e.target.value)}
       />
       <ul>
-        {characters.map((character, index) => {
-          return <li key={index}>{character.name}</li>;
+        {characters.map((char, index) => {
+          return <li key={index}>{char.name}</li>;
         })}
       </ul>
     </>
