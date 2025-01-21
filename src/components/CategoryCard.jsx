@@ -2,7 +2,7 @@ import "./CategoryCard.css";
 import { Link } from "react-router-dom";
 function CategoryCard({ title, imagePath, alt }) {
   return (
-    <Link to={`./${title}`} className="category-link">
+    <Link to={`${title}`} className="category-link">
       <section>
         <figure>
           <img src={`${imagePath}`} alt={alt} />
