@@ -1,38 +1,21 @@
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-// import fetchCharacterData from "./js/characterData";
-import info from "./data/info.json";
-import CategoryCard from "./components/CategoryCard";
-// import getImageUrl from "../public/getImageUrl";
-// fetchCharacterData("rainbow");
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Characters from "./pages/Characters";
+import Songs from "./pages/Songs";
+import Episodes from "./pages/Episodes";
+import Comics from "./pages/Comics";
 function App() {
-  const categories = [];
-  for (const val of Object.values(info.categories)) {
-    categories.push(val);
-    console.log(val);
-  }
   return (
-    <>
-      <Header title="My Little Wiki" />
-      <main>
-        {categories.map((category) => (
-          <CategoryCard
-            key={category.title}
-            title={category.title}
-            imagePath={category.imagePath + "." + category.fileExtension}
-            // imagePath={`${category.imagePath}.${category.fileExtension}`}
-            alt={category.alt}
-          />
-        ))}
-      </main>
-      <Footer
-        title="A &copy;KodeHode Project"
-        author="Alexander"
-        linkSize="1em"
-      />
-    </>
+    <Router>
+      <Routes>
+        <Route exact path="KHFEU04-API/" element={<Home />} />
+        <Route path="KHFEU04-API/characters" element={<Characters />} />
+        <Route path="KHFEU04-API/songs" element={<Songs />} />
+        <Route path="KHFEU04-API/episodes" element={<Episodes />} />
+        <Route path="KHFEU04-API/comics" element={<Comics />} />
+      </Routes>
+    </Router>
   );
 }
 
