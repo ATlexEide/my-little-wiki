@@ -9,11 +9,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="KHFEU04-API/" element={<Home />} />
-        <Route path="KHFEU04-API/characters" element={<Characters />} />
-        <Route path="KHFEU04-API/songs" element={<Songs />} />
-        <Route path="KHFEU04-API/episodes" element={<Episodes />} />
-        <Route path="KHFEU04-API/comics" element={<Comics />} />
+        <Route exact path="my-little-wiki/" element={<Home />} />
+        <Route path="my-little-wiki/characters" element={<Characters />} />
+        <Route path="my-little-wiki/songs" element={<Songs />} />
+        <Route path="my-little-wiki/episodes" element={<Episodes />} />
+        <Route path="my-little-wiki/comics" element={<Comics />} />
       </Routes>
     </Router>
   );
