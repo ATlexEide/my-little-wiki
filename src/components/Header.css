@@ -22,7 +22,8 @@ ul {
 li {
   font-size: var(--font-size);
 }
-header img {
+header img,
+header a {
   height: 100%;
   width: auto;
 }
