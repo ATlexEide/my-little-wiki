@@ -1,6 +1,10 @@
 import "./Footer.css";
 import NavLinkExternal from "./NavLinkExternal.jsx";
-function Footer({ title, author, linkSize }) {
+function Footer({
+  title = "A KodeHode Project",
+  author = "Alexander",
+  linkSize = "1em",
+}) {
   const fontSize = linkSize;
   return (
     <footer>
