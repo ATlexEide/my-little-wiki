@@ -1,9 +1,13 @@
+:root {
+  --card-primary-color: #fdf6af;
+  --card-secondary-color: #102927;
+}
 section {
   place-self: center;
-  background-color: gray;
+  background-color: var(--card-primary-color);
   padding: 2em;
   width: 100%;
-  border: solid 4px black;
+  border: solid 4px var(--card-secondary-color);
   border-radius: 20px;
   transition: 0.3s;
 }
@@ -14,9 +18,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-a:hover {
-  color: white;
-}
+
 section:hover {
   scale: 0.95;
   opacity: 0.9;
@@ -31,7 +33,8 @@ h2 {
 img {
   width: 5rem;
 }
-.category-link {
+.category-link,
+.category-link:hover {
   text-decoration: under;
-  color: white;
+  color: var(--secondary-color);
 }
