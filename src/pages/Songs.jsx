@@ -1,4 +1,11 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 function Songs() {
-  return <h1>Songs</h1>;
+  return (
+    <>
+      <Header title="Songs" />
+      <Footer />
+    </>
+  );
 }
 export default Songs;
