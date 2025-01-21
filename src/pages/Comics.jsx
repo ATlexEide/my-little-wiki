@@ -1,4 +1,11 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 function Comics() {
-  return <h1>Comics</h1>;
+  return (
+    <>
+      <Header title={"Comics"} />
+      <Footer />
+    </>
+  );
 }
 export default Comics;
