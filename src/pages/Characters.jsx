@@ -1,4 +1,11 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 function Characters() {
-  return <h1>Characters</h1>;
+  return (
+    <>
+      <Header title={"Characters"} />
+      <Footer />
+    </>
+  );
 }
 export default Characters;
