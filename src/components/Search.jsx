@@ -26,9 +26,13 @@ function Search() {
         </h3>
       )}
       <ul>
-        {characters.map((char, index) => {
-          return <li key={index}>{char.name}</li>;
-        })}
+        {characters.length ? (
+          characters.map((char, index) => {
+            return <li key={index}>{char.name}</li>;
+          })
+        ) : (
+          <p>Loading...</p>
+        )}
       </ul>
     </>
   );
