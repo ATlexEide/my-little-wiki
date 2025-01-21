@@ -1,6 +1,7 @@
 :root {
   --primary-color: #9edbf9;
   --secondary-color: #102927;
+  --text-stroke-color: #494792;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -46,7 +47,7 @@ body {
 
 h1 {
   color: white;
-  -webkit-text-stroke: 3px #494792;
+  -webkit-text-stroke: 3px var(--text-stroke-color);
   paint-order: stroke fill;
   font-size: 3.2em;
   line-height: 1.1;
