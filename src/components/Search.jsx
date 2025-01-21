@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Search.css";
 
-function Search() {
+function Search({ characters }) {
   const [input, setInput] = useState("");
   return (
     <>
@@ -10,7 +10,11 @@ function Search() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <ul></ul>
+      <ul>
+        {characters.map((character, index) => {
+          return <li key={index}>{character.name}</li>;
+        })}
+      </ul>
     </>
   );
 }
