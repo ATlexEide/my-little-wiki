@@ -20,6 +20,11 @@ function Search() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
+      {input && (
+        <h3>
+          Showing results for: <i>{input}</i>
+        </h3>
+      )}
       <ul>
         {characters.map((char, index) => {
           return <li key={index}>{char.name}</li>;
