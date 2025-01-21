@@ -1,7 +1,9 @@
 input {
+  background-color: aliceblue;
+  border: solid 2px var(--text-stroke-color);
   width: 20%;
+  color: var(--secondar-color);
   font-size: 100%;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   border-radius: 25px;
-  border: solid 2px pink;
 }
