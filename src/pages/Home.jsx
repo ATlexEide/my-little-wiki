@@ -12,7 +12,7 @@ function Home() {
   }
   return (
     <>
-      <Header title="My Little Wiki" />
+      <Header />
       <main>
         {categories.map((category) => (
           <CategoryCard
@@ -23,11 +23,7 @@ function Home() {
           />
         ))}
       </main>
-      <Footer
-        title="A &copy;KodeHode Project"
-        author="Alexander"
-        linkSize="1em"
-      />
+      <Footer />
     </>
   );
 }
