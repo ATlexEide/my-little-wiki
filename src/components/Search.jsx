@@ -11,7 +11,8 @@ function Search() {
         setCharacters(res.data);
       })
       .catch((e) => console.log(e));
-  });
+    console.log("run");
+  }, [input]);
 
   return (
     <>
