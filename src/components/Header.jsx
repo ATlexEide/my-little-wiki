@@ -1,5 +1,4 @@
 import "./Header.css";
-import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 function Header({ title }) {
   return (
@@ -8,7 +7,6 @@ function Header({ title }) {
         <img src="mlp2020.png" alt="My little pony 2020 logo" />
       </Link>
       <h1>My Little Wiki{title ? ` | ${title}` : null}</h1>
-      <SearchBar />
     </header>
   );
 }
