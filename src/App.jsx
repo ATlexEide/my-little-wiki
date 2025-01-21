@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 // import fetchCharacterData from "./js/characterData";
 import info from "./data/info.json";
 import CategoryCard from "./components/CategoryCard";
-import getImageUrl from "../public/getImageUrl";
+// import getImageUrl from "../public/getImageUrl";
 // fetchCharacterData("rainbow");
 
 function App() {
@@ -21,10 +21,7 @@ function App() {
           <CategoryCard
             key={category.title}
             title={category.title}
-            imagePath={getImageUrl(
-              category.title.toLocaleLowerCase(),
-              category.fileExtension
-            )}
+            imagePath={category.imagePath + "." + category.fileExtension}
             // imagePath={`${category.imagePath}.${category.fileExtension}`}
             alt={category.alt}
           />
