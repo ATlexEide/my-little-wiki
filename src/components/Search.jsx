@@ -1,19 +1,20 @@
 import "./Search.css";
 import { useState, useEffect } from "react";
 
-function Search() {
+function Search({ category }) {
   const [input, setInput] = useState("");
-  const [characters, setCharacters] = useState([]);
+  const [data, setData] = useState([]);
+  const url = "https://ponyapi.net/v1/";
+  console.log(input);
   useEffect(() => {
-    fetch(`https://ponyapi.net/v1/character/${input ? input : "all"}`)
+    fetch(`${url}${category}/${input ? input.replace(/[\s,]/g, "_") : "all"}`)
       .then((res) => res.json())
       .then((res) => {
-        setCharacters(res.data);
+        setData(res.data);
       })
       .catch((e) => console.log(e));
-    console.log("run");
-  }, [input]);
-  if (!characters.length && input) {
+  }, [input, category]);
+  if (!data.length && input) {
     return (
       <>
         <input
@@ -27,7 +28,7 @@ function Search() {
       </>
     );
   }
-  if (characters.length) {
+  if (data.length) {
     {
       return (
         <>
@@ -42,7 +43,7 @@ function Search() {
             </h3>
           )}
           <ul>
-            {characters.map((char, index) => {
+            {data.map((char, index) => {
               return <li key={index}>{char.name}</li>;
             })}
           </ul>
@@ -55,17 +56,23 @@ function Search() {
       <input
         placeholder="Search"
         value={input}
-        onChange={(e) => setInput(e.target.value)}
+        onChange={(e) => {
+          let currInput = e.target.value.replace(/[\s,]/g, "_");
+          console.log(typeof currInput);
+          console.clear();
+          console.log("Formatted: ", currInput);
+          setInput(currInput);
+        }}
       />
       {/* {input && (
         <h3>
-          Showing results for: <i>{input}</i>
+          Showing results data: <i>{input}</i>
         </h3>
       )} */}
 
       <ul>
-        {characters.length ? (
-          characters.map((char, index) => {
+        {data.length ? (
+          data.map((char, index) => {
             return <li key={index}>{char.name}</li>;
           })
         ) : (
