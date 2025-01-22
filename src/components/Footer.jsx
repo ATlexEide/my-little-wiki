@@ -11,8 +11,8 @@ function Footer({
       <span>
         {title} by {author}
       </span>
-      <nav>
-        <ul>
+      <nav id="footer-list">
+        <ul id="footer-links">
           <NavLinkExternal
             fontSize={fontSize}
             link="https://github.com/ATlexEide/KHFEU04-API"
