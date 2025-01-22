@@ -1,8 +1,22 @@
-main {
-  display: flex;
-}
-ul {
+#character-list {
   display: flex;
   flex-direction: column;
-  height: fit-content;
+  align-items: center;
+}
+#results {
+  position: relative;
+  width: 50%;
+  display: inline-block;
+  padding-top: 1em;
+}
+ul {
+  padding: 1em;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+ul,
+.no-result {
+  padding-bottom: 100%;
 }
