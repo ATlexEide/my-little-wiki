@@ -5,7 +5,7 @@ function Comics() {
   return (
     <>
       <Header title={"Characters"} />
-      <main id="character-list">
+      <main id="results-container">
         <Search category="comics-story" />
       </main>
       <Footer />
