@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="categories">
         {categories.map((category) => (
           <CategoryCard
             key={category.title}
