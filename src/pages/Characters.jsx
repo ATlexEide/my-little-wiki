@@ -7,7 +7,7 @@ function Characters() {
   return (
     <>
       <Header title={"Characters"} />
-      <main id="character-list">
+      <main id="results-container">
         <Search category="character" />
       </main>
       <Footer />
