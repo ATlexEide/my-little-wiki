@@ -5,7 +5,7 @@ function Songs() {
   return (
     <>
       <Header title="Songs" />
-      <main>
+      <main id="results-container">
         <Search category="song" />
       </main>
       <Footer />
