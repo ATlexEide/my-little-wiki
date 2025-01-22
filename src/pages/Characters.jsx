@@ -7,7 +7,7 @@ function Characters() {
   return (
     <>
       <Header title={"Characters"} />
-      <main>
+      <main id="character-list">
         <Search />
       </main>
       <Footer />
