@@ -5,7 +5,6 @@ function Search({ category }) {
   const [input, setInput] = useState("");
   const [data, setData] = useState([]);
   const url = "https://ponyapi.net/v1/";
-  console.log(input);
   useEffect(() => {
     fetch(`${url}${category}/${input ? input.replace(/[\s,]/g, "_") : "all"}`)
       .then((res) => res.json())
@@ -56,13 +55,7 @@ function Search({ category }) {
       <input
         placeholder="Search"
         value={input}
-        onChange={(e) => {
-          let currInput = e.target.value.replace(/[\s,]/g, "_");
-          console.log(typeof currInput);
-          console.clear();
-          console.log("Formatted: ", currInput);
-          setInput(currInput);
-        }}
+        onChange={(e) => setInput(e.target.value)}
       />
       {/* {input && (
         <h3>
