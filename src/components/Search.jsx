@@ -1,18 +1,23 @@
 import "./Search.css";
 import { useState, useEffect } from "react";
 
-function Search({ category }) {
+function Search({ category, limit = 200 }) {
   const [input, setInput] = useState("");
   const [data, setData] = useState([]);
   const url = "https://ponyapi.net/v1/";
   useEffect(() => {
-    fetch(`${url}${category}/${input ? input.replace(/[\s,]/g, "_") : "all"}`)
+    fetch(
+      `${url}${category}/${
+        input ? input.replace(/[\s,]/g, "_") : "all"
+      }?limit=${limit}`
+    )
       .then((res) => res.json())
       .then((res) => {
+        console.log(res.data);
         setData(res.data);
       })
       .catch((e) => console.log(e));
-  }, [input, category]);
+  }, [input, category, limit]);
   if (!data.length && input) {
     return (
       <>
