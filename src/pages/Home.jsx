@@ -8,7 +8,6 @@ function Home() {
   const categories = [];
   for (const val of Object.values(info.categories)) {
     categories.push(val);
-    console.log(val);
   }
   return (
     <>
