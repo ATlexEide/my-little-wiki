@@ -13,7 +13,43 @@ function Search() {
       .catch((e) => console.log(e));
     console.log("run");
   }, [input]);
-
+  if (!characters.length && input) {
+    return (
+      <>
+        <input
+          placeholder="Search"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <h3 id="results" className="no-result">
+          No results for: <i>{input}</i>
+        </h3>
+      </>
+    );
+  }
+  if (characters.length) {
+    {
+      return (
+        <>
+          <input
+            placeholder="Search"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          {input && (
+            <h3 id="results">
+              Showing results for: <i>{input}</i>
+            </h3>
+          )}
+          <ul>
+            {characters.map((char, index) => {
+              return <li key={index}>{char.name}</li>;
+            })}
+          </ul>
+        </>
+      );
+    }
+  }
   return (
     <>
       <input
@@ -21,11 +57,12 @@ function Search() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      {input && (
+      {/* {input && (
         <h3>
           Showing results for: <i>{input}</i>
         </h3>
-      )}
+      )} */}
+
       <ul>
         {characters.length ? (
           characters.map((char, index) => {
