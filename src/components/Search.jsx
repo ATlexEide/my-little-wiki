@@ -77,7 +77,7 @@ function Search({ category, limit = 200 }) {
         {data.length ? (
           data.map((target, index) => {
             return (
-              <Link key={`${target.name}-information`} to="information">
+              <Link key={`${target.name}-information`} to={`./${target.id}`}>
                 <li key={index}>{target.name}</li>
               </Link>
             );
