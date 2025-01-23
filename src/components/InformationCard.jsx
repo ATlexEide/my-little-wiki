@@ -12,6 +12,7 @@ function InformationCard({ category, id }) {
 
   return (
     <section>
+      {/* CHARACTERS */}
       {target.image && (
         <figure>
           <img src={target.image && target.image[0]} alt="" />
@@ -55,6 +56,39 @@ function InformationCard({ category, id }) {
               return <img key={image + index} src={image} />;
             })}
       </>
+      {/* SONGS */}
+      {target.length && <p>00:01:50</p>}
+      {console.log(target.video)}
+      {target.video && (
+        <>
+          <a target="_blank" href={target.video}>
+            Video
+          </a>
+          <iframe src={target.video.replace("watch?v=", "embed/")}></iframe>
+        </>
+      )}
+      {console.log(target.video)}
+      {target.episode && (
+        <p>
+          <b>Episode</b>
+          {target.episode}
+        </p>
+      )}
+      {target.musicby && (
+        <p>
+          <b>Music by</b>:{target.musicby}
+        </p>
+      )}
+      {target.lyricsby && (
+        <p>
+          <b>Lyrics by</b>:{target.lyricsby}
+        </p>
+      )}
+      {target.keysignature && (
+        <p>
+          <b>Key signature</b>:{target.keysignature}
+        </p>
+      )}
       {target.url && <a href={target.url}>Fandom wiki page</a>}
     </section>
   );
