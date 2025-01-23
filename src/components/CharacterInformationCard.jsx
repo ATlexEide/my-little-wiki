@@ -46,6 +46,7 @@ function CharacterInformationCard({ character }) {
               return <img key={image + index} src={image} />;
             })}
       </>
+      {character.url && <a href={character.url}>Fandom wiki page</a>}
     </section>
   );
 }
