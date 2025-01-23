@@ -1,5 +1,6 @@
 import "./Search.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Search({ category, limit = 200 }) {
   const [input, setInput] = useState("");
@@ -47,8 +48,12 @@ function Search({ category, limit = 200 }) {
             </h3>
           )}
           <ul>
-            {data.map((char, index) => {
-              return <li key={index}>{char.name}</li>;
+            {data.map((target, index) => {
+              return (
+                <Link key={`${target.name}-information`} to={`./${target.id}`}>
+                  <li key={index}>{target.name}</li>
+                </Link>
+              );
             })}
           </ul>
         </>
@@ -70,8 +75,12 @@ function Search({ category, limit = 200 }) {
 
       <ul>
         {data.length ? (
-          data.map((char, index) => {
-            return <li key={index}>{char.name}</li>;
+          data.map((target, index) => {
+            return (
+              <Link key={`${target.name}-information`} to="information">
+                <li key={index}>{target.name}</li>
+              </Link>
+            );
           })
         ) : (
           <p>Loading...</p>
