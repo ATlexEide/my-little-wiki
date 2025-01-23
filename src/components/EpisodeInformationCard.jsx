@@ -1,6 +1,6 @@
 function EpisodeInformationCard({ episode }) {
   return (
-    <section>
+    <section id="infocard">
       {/* EPISODE */}
       {episode.image && (
         <figure>
