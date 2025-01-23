@@ -20,15 +20,15 @@ function App() {
           element={<Information category="character" />}
         />
         <Route
-          path="my-little-wiki/characters/:id"
+          path="my-little-wiki/songs/:id"
           element={<Information category="song" />}
         />
         <Route
-          path="my-little-wiki/characters/:id"
+          path="my-little-wiki/episodes/:id"
           element={<Information category="episode" />}
         />
         <Route
-          path="my-little-wiki/characters/:id"
+          path="my-little-wiki/comics/:id"
           element={<Information category="comic" />}
         />
       </Routes>
