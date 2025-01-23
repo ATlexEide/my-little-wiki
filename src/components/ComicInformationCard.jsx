@@ -1,6 +1,6 @@
 function ComicInformationCard({ comic }) {
   return (
-    <section>
+    <section id="infocard">
       {comic.image && (
         <figure>
           <img src={comic.image} alt="" />
