@@ -21,7 +21,7 @@ function Information({ category }) {
       return routeCard(id, category);
     case "episode":
       return routeCard(id, category);
-    case "comic":
+    case "comics-story":
       return routeCard(id, category);
 
     default:
