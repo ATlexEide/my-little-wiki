@@ -2,7 +2,7 @@
   --card-primary-color: #fdf6af;
   --card-secondary-color: #102927;
 }
-section {
+#categorycard {
   place-self: center;
   background-color: var(--card-primary-color);
   padding: 2em;
@@ -11,7 +11,7 @@ section {
   border-radius: 20px;
   transition: 0.3s;
 }
-section,
+#categorycard,
 a {
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ a {
   align-items: center;
 }
 
-section:hover {
+#categorycard:hover {
   scale: 0.95;
   opacity: 0.9;
 }

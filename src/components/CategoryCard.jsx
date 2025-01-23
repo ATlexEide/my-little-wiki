@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function CategoryCard({ title, imagePath, alt }) {
   return (
     <Link to={`${title}`} className="category-link">
-      <section>
+      <section id="categorycard">
         <figure>
           <img src={`${imagePath}`} alt={alt} />
         </figure>
