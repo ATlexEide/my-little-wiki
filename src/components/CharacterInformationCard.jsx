@@ -1,7 +1,7 @@
 function CharacterInformationCard({ character }) {
   console.log(character);
   return (
-    <section>
+    <section id="infocard">
       {/* CHARACTERS */}
       {character.image && (
         <figure>
