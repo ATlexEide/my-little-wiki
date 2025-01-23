@@ -12,12 +12,30 @@ function InformationCard({ category, id }) {
 
   return (
     <section>
-      <figure>
-        <img src={target.image && target.image[0]} alt="" />
-      </figure>
-      <h1>{target.name}</h1>
-      <p>{target.alias && target.alias}</p>
-      {target.residence && <p>Residence: {target.residence}</p>}
+      {target.image && (
+        <figure>
+          <img src={target.image && target.image[0]} alt="" />
+          <h1>{target.name}</h1>
+          <p>{target.alias && target.alias}</p>
+        </figure>
+      )}
+      {!target.image && <h1>{target.name}</h1>}
+      {!target.image && <p>{target.alias && target.alias}</p>}
+      {target.sex && (
+        <p>
+          <b>sex</b>:{target.sex}
+        </p>
+      )}
+      {target.residence && (
+        <p>
+          <b>Residence</b>: {target.residence}
+        </p>
+      )}
+      {target.occupation && (
+        <p>
+          <b>Occupation</b>: {target.occupation}
+        </p>
+      )}
       {target.kind && (
         <p>
           Kind:{" "}
@@ -28,6 +46,16 @@ function InformationCard({ category, id }) {
             : target.kind[0]}
         </p>
       )}
+      <>
+        {target.image && <h2>More images:</h2>}
+        {target.image &&
+          target.image
+            .filter((img, index) => index > 0)
+            .map((image, index) => {
+              return <img key={image + index} src={image} />;
+            })}
+      </>
+      {target.url && <a href={target.url}>Fandom wiki page</a>}
     </section>
   );
 }
