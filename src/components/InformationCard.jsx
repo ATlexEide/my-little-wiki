@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import CharacterInformationCard from "./CharacterInformationCard";
 import SongInformationCard from "./SongInformationCard";
 import EpisodeInformationCard from "./EpisodeInformationCard";
+import ComicInformationCard from "./ComicInformationCard";
 function InformationCard({ category, id }) {
   const [target, setTarget] = useState([]);
   useEffect(() => {
@@ -22,6 +23,9 @@ function InformationCard({ category, id }) {
   }
   if (category === "episode") {
     return <EpisodeInformationCard episode={target} />;
+  }
+  if (category === "comics-story") {
+    return <ComicInformationCard comic={target} />;
   }
 }
 export default InformationCard;
