@@ -16,7 +16,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  margin-bottom: auto;
 }
 #results {
   position: relative;
