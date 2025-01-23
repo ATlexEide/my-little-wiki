@@ -1,6 +1,6 @@
 function SongInformationCard({ song }) {
   return (
-    <section>
+    <section id="infocard">
       {/* SONGS */}
       {song.name && <h1>{song.name}</h1>}
       {song.length && <p>00:01:50</p>}
