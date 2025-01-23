@@ -1,3 +1,5 @@
+//TODO: FIX LINK TO EPISODE PAGE
+//<Link to={`/episodes/${target.episode.replace(" ", "")}`}></Link>
 import { useEffect, useState } from "react";
 function InformationCard({ category, id }) {
   const [target, setTarget] = useState([]);
