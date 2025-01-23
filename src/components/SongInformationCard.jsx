@@ -2,6 +2,7 @@ function SongInformationCard({ song }) {
   return (
     <section>
       {/* SONGS */}
+      {song.name && <h1>{song.name}</h1>}
       {song.length && <p>00:01:50</p>}
       {song.video && (
         <>
@@ -32,6 +33,7 @@ function SongInformationCard({ song }) {
           <b>Key signature</b>:{song.keysignature}
         </p>
       )}
+      {song.url && <a href={song.url}>Fandom wiki page</a>}
     </section>
   );
 }
