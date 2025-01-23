@@ -29,7 +29,7 @@ function App() {
         />
         <Route
           path="my-little-wiki/comics/:id"
-          element={<Information category="comic" />}
+          element={<Information category="comics-story" />}
         />
       </Routes>
     </Router>
