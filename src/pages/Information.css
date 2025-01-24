@@ -1,6 +1,54 @@
 #infocard {
   display: flex;
   flex-direction: column;
+  justify-content: end;
   margin: 0 auto;
   width: 60%;
+  padding: 6%;
+  gap: 1em;
+  font-size: large;
+}
+#info-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+}
+
+#figure-image {
+  border: var(--text-stroke-color) 0.5em solid;
+  border-radius: 20px;
+  width: 100%;
+}
+
+#figure-header {
+  position: relative;
+  height: 0;
+  bottom: 1em;
+  z-index: 2;
+}
+#info {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+#details {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+#gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+#images img {
+  width: 30%;
 }
