@@ -9,13 +9,17 @@ function CharacterInformationCard({ character }) {
   console.log(character);
   return (
     <section id="infocard">
-      <Name target={character} />
-      <Sex target={character} />
-      <Residence target={character} />
-      <Occupation target={character} />
-      <Kind target={character} />
-      <Images target={character} />
+      <div id="info">
+        <Name target={character} />
+        <div id="details">
+          <Sex target={character} />
+          <Kind target={character} />
+          <Residence target={character} />
+          <Occupation target={character} />
+        </div>
+      </div>
       <Url target={character} />
+      <Images target={character} />
     </section>
   );
 }
