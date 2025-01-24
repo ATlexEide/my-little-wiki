@@ -1,8 +1,9 @@
+import Name from "./InfoCardComponents/Name";
 function SongInformationCard({ song }) {
   return (
     <section id="infocard">
       {/* SONGS */}
-      {song.name && <h1>{song.name}</h1>}
+      <Name target={song} />
       {song.length && <p>00:01:50</p>}
       {song.video && (
         <>
