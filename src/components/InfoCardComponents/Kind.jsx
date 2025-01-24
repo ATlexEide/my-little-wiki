@@ -2,7 +2,7 @@ function Kind({ target }) {
   return (
     target.kind && (
       <p>
-        Kind:{" "}
+        <b>Kind</b>:{" "}
         {target.kind.length > 1
           ? target.kind.slice(0, target.kind.length - 1).join(", ") +
             " and " +
