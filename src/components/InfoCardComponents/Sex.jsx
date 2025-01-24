@@ -2,7 +2,7 @@ function Sex({ target }) {
   return (
     target.sex && (
       <p>
-        <b>sex</b>:{target.sex}
+        <b>Sex</b>:{target.sex}
       </p>
     )
   );
