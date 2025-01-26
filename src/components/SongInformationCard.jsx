@@ -1,40 +1,14 @@
 import Name from "./InfoCardComponents/Name";
+import Video from "./InfoCardComponents/Video";
+import SongInfo from "./InfoCardComponents/SongInfo";
+import Url from "./InfoCardComponents/Url";
 function SongInformationCard({ song }) {
   return (
     <section id="infocard">
-      {/* SONGS */}
       <Name target={song} />
-      {song.length && <p>00:01:50</p>}
-      {song.video && (
-        <>
-          <a target="_blank" href={song.video}>
-            Video
-          </a>
-          <iframe src={song.video.replace("watch?v=", "embed/")}></iframe>
-        </>
-      )}
-      {song.episode && (
-        <p>
-          <b>Episode</b>
-          {song.episode}
-        </p>
-      )}
-      {song.musicby && (
-        <p>
-          <b>Music by</b>:{song.musicby}
-        </p>
-      )}
-      {song.lyricsby && (
-        <p>
-          <b>Lyrics by</b>:{song.lyricsby}
-        </p>
-      )}
-      {song.keysignature && (
-        <p>
-          <b>Key signature</b>:{song.keysignature}
-        </p>
-      )}
-      {song.url && <a href={song.url}>Fandom wiki page</a>}
+      <Video target={song} />
+      <SongInfo target={song} />
+      <Url target={song} />
     </section>
   );
 }
