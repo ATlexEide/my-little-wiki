@@ -1,11 +1,12 @@
 function Name({ target }) {
   return (
     <>
+      {console.log(target)}
       {target.image && (
         <figure id="info-figure">
           <img
             id="figure-image"
-            src={target.image && target.image[0]}
+            src={target.image && target.image}
             alt={target.name}
           />
           <h1 id="figure-header">{target.name}</h1>
