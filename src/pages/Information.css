@@ -15,12 +15,16 @@
   width: 100%;
 }
 
-#figure-image {
+#figure-image,
+iframe {
   border: var(--text-stroke-color) 0.5em solid;
   border-radius: 20px;
   width: 100%;
 }
-
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
 #figure-header {
   position: relative;
   height: 0;
