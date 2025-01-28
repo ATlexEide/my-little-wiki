@@ -3,26 +3,31 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InformationCard from "../components/InformationCard";
 import { useParams } from "react-router-dom";
-function routeCard(id, category) {
+function routeCard(id, category, title) {
   return (
     <>
-      <Header />
+      <Header title={title} />
       <InformationCard category={category} id={id} />
       <Footer />
     </>
   );
 }
 function Information({ category }) {
+  let title;
   const { id } = useParams();
   switch (category) {
     case "character":
-      return routeCard(id, category);
+      title = "Character";
+      return routeCard(id, category, title);
     case "song":
-      return routeCard(id, category);
+      title = "Song";
+      return routeCard(id, category, title);
     case "episode":
-      return routeCard(id, category);
+      title = "Episode";
+      return routeCard(id, category, title);
     case "comics-story":
-      return routeCard(id, category);
+      title = "Comic";
+      return routeCard(id, category, title);
 
     default:
       break;
