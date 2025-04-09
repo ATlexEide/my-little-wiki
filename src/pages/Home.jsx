@@ -11,7 +11,7 @@ function Home() {
   }
   return (
     <>
-      <Header />
+      <Header title="Main page" />
       <main id="categories">
         {categories.map((category) => (
           <CategoryCard

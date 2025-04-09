@@ -10,25 +10,22 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="my-little-wiki/" element={<Home />} />
-        <Route path="my-little-wiki/characters" element={<Characters />} />
-        <Route path="my-little-wiki/songs" element={<Songs />} />
-        <Route path="my-little-wiki/episodes" element={<Episodes />} />
-        <Route path="my-little-wiki/comics" element={<Comics />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/characters" element={<Characters />} />
+        <Route path="/songs" element={<Songs />} />
+        <Route path="/episodes" element={<Episodes />} />
+        <Route path="/comics" element={<Comics />} />
         <Route
-          path="my-little-wiki/characters/:id"
+          path="/characters/:id"
           element={<Information category="character" />}
         />
+        <Route path="/songs/:id" element={<Information category="song" />} />
         <Route
-          path="my-little-wiki/songs/:id"
-          element={<Information category="song" />}
-        />
-        <Route
-          path="my-little-wiki/episodes/:id"
+          path="/episodes/:id"
           element={<Information category="episode" />}
         />
         <Route
-          path="my-little-wiki/comics/:id"
+          path="/comics/:id"
           element={<Information category="comics-story" />}
         />
       </Routes>
